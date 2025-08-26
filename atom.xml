@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>[ Ardnys ]</title>
+    <subtitle>Personal blog of Ardnys</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://Ardnys.github.io/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://Ardnys.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-08-26T00:00:00+00:00</updated>
+    <id>https://Ardnys.github.io/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Journaling with AI: Said &amp; Done</title>
+        <published>2025-08-26T00:00:00+00:00</published>
+        <updated>2025-08-26T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://Ardnys.github.io/posts/said-and-done/"/>
+        <id>https://Ardnys.github.io/posts/said-and-done/</id>
+        
+        <content type="html" xml:base="https://Ardnys.github.io/posts/said-and-done/">&lt;h1 id=&quot;journaling&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#journaling&quot; aria-label=&quot;Anchor link for: journaling&quot;&gt;Journaling&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;what-is-journaling-briefly&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-is-journaling-briefly&quot; aria-label=&quot;Anchor link for: what-is-journaling-briefly&quot;&gt;What is Journaling (briefly)&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;It&#x27;s like a pragmatic diary where you write about your goals and what you want to achieve and things like that. It&#x27;s a versatile, personal thing that takes many shapes or forms. Over the years I&#x27;ve had kept physical and digital journals, switching between them depending on my mood or whichever felt more convenient. Writing stuff eases the mind and tidy journaling gives me some data to keep track of activities like exercise and studies.&lt;&#x2F;p&gt;
+&lt;p&gt;Until recently, I had no problems with writing. But now I find it &lt;strong&gt;really&lt;&#x2F;strong&gt; difficult and I can&#x27;t find out why. That&#x27;s why I decided to attack this problem from an angle that is unfamiliar to me: &lt;em&gt;speaking.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I am not good at speaking. I don&#x27;t like tech that interacts with speech. I don&#x27;t like using my voice unless I have to. Unfortunately, this is suboptimal. &lt;em&gt;Now&lt;&#x2F;em&gt; is a good time to change this for the better as writing is unattractive and speaking about my day doesn&#x27;t sound too bad. I could even put a speech-to-text model and let an LLM extract the information and generate markdown files- wait, that&#x27;s not a bad idea at all!&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;ai-could-be-good-at-this&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#ai-could-be-good-at-this&quot; aria-label=&quot;Anchor link for: ai-could-be-good-at-this&quot;&gt;AI could be good at this&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;idea&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#idea&quot; aria-label=&quot;Anchor link for: idea&quot;&gt;Idea&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;I want to talk about my day, giving various information like; when I emerge from bed, what programming project I work on, exercises like running or cycling; or more mundane activities like chores, cooking, or how my pour over coffee turned out. AI could extract this information because my range of activities are limited so it won&#x27;t see something unusual outside this category. This information should be logged to a markdown file as a journal to make it easy to read and to correct and add additional notes if needed. It could also be stored in a database for further RAG stuff or analysis. Additionally, I can load previous days to the prompt to give AI context about my previous days so it can remind me about things I neglected or praise me for my diligent work.&lt;&#x2F;p&gt;
+&lt;p&gt;The last bit sounds funny but it has potential to be very useful to me. It would be great to be reminded about the dessert I made last week to give me chance to make it again, to be reminded of a programming project I was shying away from because of a roadblock, to be reminded of chores to keep the house tidy and clean and to be reminded to go outside to touch grass and socialize.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ai-things&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#ai-things&quot; aria-label=&quot;Anchor link for: ai-things&quot;&gt;AI things&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;This project requires AI for the following features:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Speech to text&lt;&#x2F;li&gt;
+&lt;li&gt;Extracting information from transcription&lt;&#x2F;li&gt;
+&lt;li&gt;Generating markdown files&lt;&#x2F;li&gt;
+&lt;li&gt;Feedback for the next day&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;speech-to-text&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#speech-to-text&quot; aria-label=&quot;Anchor link for: speech-to-text&quot;&gt;Speech to text&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;After some reading online, I was guided to OpenAI&#x27;s open source Whisper models. &lt;em&gt;Insert a joke about OpenAI having open source models after so long, despite having open in their names&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Base model for English works great for it&#x27;s size and resource requirements. The turbo? model is amazing, but it wants more juice. I decided to go with base model because not everyone has 8GBs of VRAM and I didn&#x27;t want to rely too much on an amazing model. The base model needs a slow and accurate speaking though.&lt;&#x2F;p&gt;
+&lt;p&gt;Whisper&#x27;s python package broke &lt;code&gt;uv&lt;&#x2F;code&gt; which is a shame though.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;extraction&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#extraction&quot; aria-label=&quot;Anchor link for: extraction&quot;&gt;Extraction&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Extraction is honestly incredible. It opens so much possibilities. It&#x27;s one of the key parts of this project as well.&lt;&#x2F;p&gt;
+&lt;p&gt;I followed &lt;code&gt;langchain&lt;&#x2F;code&gt;&#x27;s tutorial on extraction and then recommended practices. Giving extraction examples improved the accuracy and since then I have not had any false extractions.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Give the &quot;I didn&#x27;t do any sports&quot; example&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;generating-markdown-files&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#generating-markdown-files&quot; aria-label=&quot;Anchor link for: generating-markdown-files&quot;&gt;Generating markdown files&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Giving examples here also helped. Honestly, the biggest issue was finding a journal format that I was pleased with.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;feedback&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#feedback&quot; aria-label=&quot;Anchor link for: feedback&quot;&gt;Feedback&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Writing the prompt for feedback is tricky. I had to steer it to the direction I wanted, otherwise it says useless things.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;langchain-and-langgraph&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#langchain-and-langgraph&quot; aria-label=&quot;Anchor link for: langchain-and-langgraph&quot;&gt;Langchain and Langgraph&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;I had no experience with any of this when I started, I only heard of langchain a few times and browsed their docs a bit. At first I coded everything in langchain but it was confusing and a bit ugly so I refactored it to langgraph and I am satisfied with the results. It&#x27;s significantly easier to reason about it.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Mermaid plot here&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;llm-model&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#llm-model&quot; aria-label=&quot;Anchor link for: llm-model&quot;&gt;LLM Model&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;I used Google GenAI for this project. It works well and it has a generous free API. I want to have the option to switch to a local one but I don&#x27;t have disk space for local models at the moment. Also adding configuration options for other models would be great.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;non-ai-things&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#non-ai-things&quot; aria-label=&quot;Anchor link for: non-ai-things&quot;&gt;Non-AI things&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;structure&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#structure&quot; aria-label=&quot;Anchor link for: structure&quot;&gt;Structure&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Structuring a Python project with a lot of moving parts is something I had no experience with. I went ballistic to gain that experience and I refactored the whole codebase at least 4 times. Python is tricky because it works anyway and makes it harder to judge right or wrong. This is suboptimal when my goal is to learn and learn good. I followed my made up metric of &quot;gud enuf&quot; and stopped when I felt it was &quot;gud enuf&quot;.&lt;&#x2F;p&gt;
+&lt;p&gt;There&#x27;s a cool trick with decorators I learned from windows-screen-capture library. It allows a good separation for functions that handle some internal thing provided by library.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Said &amp; Done</title>
+        <published>2025-08-25T00:00:00+00:00</published>
+        <updated>2025-08-25T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://Ardnys.github.io/projects/said-and-done/"/>
+        <id>https://Ardnys.github.io/projects/said-and-done/</id>
+        
+        <content type="html" xml:base="https://Ardnys.github.io/projects/said-and-done/">&lt;h1 id=&quot;said-done&quot;&gt;Said &amp;amp; Done&lt;&#x2F;h1&gt;
+&lt;p&gt;Name of the projects tries to convey my motivation for this project, which is to create journals just by talking about your day. I also added extra features like suggestions or reminders for the next day, and more to come.&lt;&#x2F;p&gt;
+&lt;p&gt;This project is open source. If you are curious, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Ardnys&#x2F;SaidAndDone&quot;&gt;check out the repository here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>SEISIM (Seismic Evacuation and Impact Simulation)</title>
+        <published>2025-08-12T00:00:00+00:00</published>
+        <updated>2025-08-12T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://Ardnys.github.io/projects/seisim/"/>
+        <id>https://Ardnys.github.io/projects/seisim/</id>
+        
+        <content type="html" xml:base="https://Ardnys.github.io/projects/seisim/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Python Virtual Environment Manager</title>
+        <published>2025-08-11T00:00:00+00:00</published>
+        <updated>2025-08-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://Ardnys.github.io/projects/venv-manager/"/>
+        <id>https://Ardnys.github.io/projects/venv-manager/</id>
+        
+        <content type="html" xml:base="https://Ardnys.github.io/projects/venv-manager/">&lt;h1 id=&quot;why-virtual-environment-manager&quot;&gt;Why Virtual Environment Manager&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;my-problems-with-python-virtual-environments&quot;&gt;My Problems with Python Virtual Environments&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-support z-function z-alias z-shell&quot;&gt;alias&lt;&#x2F;span&gt; &lt;span class=&quot;z-entity z-name z-function z-alias z-shell&quot;&gt;venv&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-operator z-assignment z-shell&quot;&gt;=&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-unquoted z-shell&quot;&gt;&lt;span class=&quot;z-string z-quoted z-single z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-shell&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;virtual environment&lt;span class=&quot;z-punctuation z-definition z-string z-end z-shell&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Using venvs to install isolated packages for development is the easiest package management solution in Python. It&#x27;s not featureful, but it&#x27;ll get you your beloved packages!&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;python -m venv &amp;lt;PATH&amp;gt;&lt;&#x2F;code&gt; command creates a venv at &lt;code&gt;PATH&lt;&#x2F;code&gt;. Depending on personal preference, some (including me) put the venvs in a hidden folder like &lt;code&gt;.virtualenvs&lt;&#x2F;code&gt; in user directory, some put it in a hidden file in the root of the project that uses it. &lt;a href=&quot;https:&#x2F;&#x2F;docs.python.org&#x2F;3&#x2F;library&#x2F;venv.html&quot;&gt;Read more about venvs here&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;venv-sizes-become-an-issue-when-i-don-t-pay-attention&quot;&gt;venv sizes become an issue when I don&#x27;t pay attention&lt;&#x2F;h3&gt;
+&lt;p&gt;I like a known, easily accessible folder for the reusability of venvs for AI &#x2F; data science projects which use roughly the same set of packages. That&#x27;s especially convenient for deep learning packages that takes around ~10GB disk space.&lt;&#x2F;p&gt;
+&lt;p&gt;But it is a management nightmare; I forget what I named them or what was in that venv. I end up with near duplicates because I use one odd package for a project.&lt;&#x2F;p&gt;
+&lt;div class=&quot;note-container&quot;&gt;
+    
+            &lt;div class=&quot;note-header&quot;&gt;
+                
+                    &lt;div class=&quot;note-icon&quot;&gt;&lt;p&gt;Painful Fact!&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+                
+            &lt;&#x2F;div&gt;
+            &lt;div class=&quot;note-content&quot;&gt;&lt;p&gt;Last year I deleted ~50GBs of venvs. That&#x27;s a lot of Gee Bees.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+        
+    &lt;&#x2F;div&gt;
+&lt;p&gt;50GBs wasted? In this economy? Unacceptable.&lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;s Rust levels of disk space waste to create standalone venvs. I only have a 512GB SSD to play with until I prioritize digital storage over coffee equipment.&lt;&#x2F;p&gt;
+&lt;p&gt;Let me show you what I&#x27;m talking about.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;it-s-annoying-to-manage-them&quot;&gt;It&#x27;s annoying to manage them&lt;&#x2F;h3&gt;
+&lt;p&gt;To inspect a venv I have to do the following:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; class=&quot;language-bash z-code&quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-begin z-shell&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt; remember the venv name type the long path of activation script&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-begin z-shell&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt; also it&amp;#39;s on ...\Scripts\activate on Windows. that&amp;#39;s annoying too&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-begin z-shell&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt; even if I alias it, I still have to remember the names&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;$&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; source &lt;span class=&quot;z-meta z-group z-expansion z-tilde&quot;&gt;&lt;span class=&quot;z-variable z-language z-tilde z-shell&quot;&gt;~&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&#x2F;.virtualenvs&#x2F;da&#x2F;bin&#x2F;activate&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-begin z-shell&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt; list the packages&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;$&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; pip list&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-begin z-shell&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt; check a package&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment z-line z-number-sign z-shell&quot;&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;$&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; pip show &lt;span class=&quot;z-keyword z-operator z-assignment z-redirection z-shell&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;package&lt;span class=&quot;z-keyword z-operator z-assignment z-redirection z-shell&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;which is alright when I am already in an activated environment. But that venv was &lt;code&gt;da&lt;&#x2F;code&gt; (for &lt;strong&gt;d&lt;&#x2F;strong&gt;ata &lt;strong&gt;a&lt;&#x2F;strong&gt;nalysis) and it doesn&#x27;t have deep learning packages. Now repeat the same steps for... whatever I named that deep learning venv. Hmm I seem to have a venv for &lt;strong&gt;image analysis&lt;&#x2F;strong&gt; but also for &lt;strong&gt;computer vision&lt;&#x2F;strong&gt; too... which one has the most correct libraries...&lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;s shame really, it&#x27;s a problem I brought upon myself. But it&#x27;s engineering if I solve it.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;&#x2F;h2&gt;
+&lt;p&gt;My venvs reside in a known place and I want to display some basic information about them. All the information is available in the venv, hidden in some directories and files. A simple terminal interface, file manipulation and parsing should do the trick. Rust is perfect for this.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Actually Python is perfect-er but let&#x27;s ignore it for now&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;ll use &lt;a href=&quot;https:&#x2F;&#x2F;ratatui.rs&#x2F;&quot;&gt;ratatui&lt;&#x2F;a&gt; for the interface. I just love TUI apps, looks amazing and so fun to use. This project fits perfectly for this kind of thing.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;features-i-want&quot;&gt;Features I want&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Finding venvs in a directory.&lt;&#x2F;li&gt;
+&lt;li&gt;Searching for venvs recursively.&lt;&#x2F;li&gt;
+&lt;li&gt;Showing the path and size of venv, installed packages, number of packages&lt;&#x2F;li&gt;
+&lt;li&gt;Showing the size of package, its dependencies, number of dependencies, versions and summary&lt;&#x2F;li&gt;
+&lt;li&gt;Activation commands depending on OS and shell, printing requirements.txt&lt;&#x2F;li&gt;
+&lt;li&gt;Must work on Linux &amp;amp; Windows.&lt;&#x2F;li&gt;
+&lt;li&gt;Automated releases on Github via Github Actions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+</feed>
