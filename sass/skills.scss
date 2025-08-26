@@ -1,0 +1,45 @@
+/* --- Skills Belt Animation --- */
+.skills-belt-container {
+	width: 100%;
+	overflow: hidden;
+	padding: 2rem 0;
+	/* This creates a soft fade-out effect on the left and right edges */
+	mask-image: linear-gradient(
+		to right,
+		transparent,
+		black 20%,
+		black 80%,
+		transparent
+	);
+}
+
+.skills-belt {
+	display: flex;
+	width: max-content; /* Let the content define the width */
+	animation: scroll 30s linear infinite;
+}
+
+.skill-item {
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+	margin: 0 1.5rem;
+	font-size: 1.2rem;
+	color: var(--text-0);
+	white-space: nowrap; /* Prevent text wrapping */
+}
+
+.skill-item i {
+	font-size: 3rem; /* Increase icon size */
+	color: var(--primary-color);
+}
+
+@keyframes scroll {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		/* This scrolls exactly one half of the belt, creating a seamless loop */
+		transform: translateX(-50%);
+	}
+}

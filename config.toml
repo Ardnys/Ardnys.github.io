@@ -1,0 +1,33 @@
+# The URL the site will be built for
+base_url = "https://Ardnys.github.io"
+title = "[ Ardnys ]"
+description = "Personal blog of Ardnys"
+build_search_index = true
+generate_feeds = true
+compile_sass = true
+minify_html = true
+taxonomies = [{ name = "tags" }]
+theme = "voyager"
+
+[markdown]
+highlight_code = true
+highlight_theme = "css"
+highlight_themes_css = [
+  { theme = "ayu-dark", filename = "syntax-theme-dark.css" },
+  { theme = "ayu-light", filename = "syntax-theme-light.css" },
+]
+
+[extra]
+# Put all your custom variables here
+theme = "toggle"
+toc = true
+
+socials = [
+    { name = "github", url = "https://github.com/Ardnys/", icon = "github" },
+]
+menu = [
+  # Configure menu bar here
+    { name = "[ posts ]", url = "/posts", weight = 1 },
+    { name = "[ projects ]", url = "/projects", weight = 2 },
+    { name = "[ tags ]", url = "/tags", weight = 3 },
+]

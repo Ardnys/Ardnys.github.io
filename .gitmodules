@@ -1,0 +1,3 @@
+[submodule "themes/voyager"]
+	path = themes/voyager
+	url = https://github.com/Ardnys/voyager

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% macro home_page(section) %}
+<main>
+    <article>
+        <section class="body">
+            {{ post_macros::page_header(title=section.title) }}
+            {{ section.content | safe }}
+        </section>
+    </article>
+</main>
+{% endmacro home_page %}
+
+{% block main_content %}
+{{ self::home_page(section=section) }}
+
+<!-- TODO: make this a whatever widget thing for zola theme as a selling point lol -->
+<h1>Skills Belt</h1>
+<div class="skills-belt-container">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="skills.css">
+    <div class="skills-belt">
+        <!-- The list is duplicated to create a seamless loop -->
+        <div class="skill-item"><i class="devicon-rust-plain"></i><span>Rust</span></div>
+        <div class="skill-item"><i class="devicon-python-plain"></i><span>Python</span></div>
+        <div class="skill-item"><i class="devicon-pytorch-original"></i><span>PyTorch</span></div>
+        <div class="skill-item"><i class="devicon-java-plain"></i><span>Java</span></div>
+        <div class="skill-item"><i class="devicon-spring-plain"></i><span>Spring</span></div>
+        <div class="skill-item"><i class="devicon-kotlin-plain"></i><span>Kotlin</span></div>
+        <div class="skill-item"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
+        <div class="skill-item"><i class="devicon-typescript-plain"></i><span>TypeScript</span></div>
+        <div class="skill-item"><i class="devicon-react-original"></i><span>React</span></div>
+        <div class="skill-item"><i class="devicon-julia-plain"></i><span>Julia</span></div>
+        <!-- Duplicate -->
+        <div class="skill-item"><i class="devicon-rust-plain"></i><span>Rust</span></div>
+        <div class="skill-item"><i class="devicon-python-plain"></i><span>Python</span></div>
+        <div class="skill-item"><i class="devicon-pytorch-original"></i><span>PyTorch</span></div>
+        <div class="skill-item"><i class="devicon-java-plain"></i><span>Java</span></div>
+        <div class="skill-item"><i class="devicon-spring-plain"></i><span>Spring</span></div>
+        <div class="skill-item"><i class="devicon-kotlin-plain"></i><span>Kotlin</span></div>
+        <div class="skill-item"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
+        <div class="skill-item"><i class="devicon-typescript-plain"></i><span>TypeScript</span></div>
+        <div class="skill-item"><i class="devicon-react-original"></i><span>React</span></div>
+        <div class="skill-item"><i class="devicon-julia-plain"></i><span>Julia</span></div>
+    </div>
+</div>
+
+<h1>Recent articles</h1>
+<main class="post-list">
+    {% set section = get_section(path="posts/_index.md") %}
+    {{ post_macros::list_posts(pages=section.pages | slice(end=5)) }}
+</main>
+{% endblock main_content %}
