@@ -10,6 +10,7 @@ taxonomies = [{ name = "tags" }]
 theme = "voyager"
 
 [markdown]
+github_alerts = true
 highlight_code = true
 highlight_theme = "css"
 highlight_themes_css = [

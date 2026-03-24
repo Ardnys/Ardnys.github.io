@@ -7,6 +7,7 @@ tags=["python", "llm", "ai"]
 
 [extra]
 repo_view = true
+repo_url = "https://github.com/Ardnys/SaidAndDone"
 +++
 
 # Journaling
