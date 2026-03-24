@@ -11,12 +11,12 @@ theme = "voyager"
 
 [markdown]
 github_alerts = true
-highlight_code = true
-highlight_theme = "css"
-highlight_themes_css = [
-  { theme = "ayu-dark", filename = "syntax-theme-dark.css" },
-  { theme = "ayu-light", filename = "syntax-theme-light.css" },
-]
+
+[markdown.highlighting]
+style = "class"
+theme = "css"
+light_theme = "github-light"
+dark_theme = "github-dark"
 
 [extra]
 # Put all your custom variables here
