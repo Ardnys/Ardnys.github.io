@@ -1,6 +1,6 @@
 +++
 title = "Unfortunate Tale of quip"
-date = "2026-02-24"
+date = "2026-03-24"
 
 [taxonomies]
 tags=["python", "rust", "webrtc", "sad"]
